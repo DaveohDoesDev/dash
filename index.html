@@ -99,11 +99,12 @@
       box-shadow: 0 4px 30px rgba(0,0,0,0.4);
     }
     .nav-logo {
-      font-family: 'Outfit', sans-serif; font-weight: 800;
-      font-size: 1.5rem; letter-spacing: 0.12em;
-      color: var(--cyan); text-transform: uppercase;
+      display: flex;
+      align-items: center;
       text-decoration: none;
+      flex-shrink: 0;
     }
+    .nav-logo svg { display: block; }
     .nav-links { display: flex; gap: 2.5rem; }
     .nav-links a {
       font-size: 0.875rem; font-weight: 500;
@@ -495,7 +496,7 @@
       display: grid; grid-template-columns: 1.5fr repeat(3, 1fr);
       gap: 3rem; margin-bottom: 3rem;
     }
-    .footer-brand-logo { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: 0.12em; color: var(--cyan); margin-bottom: 0.75rem; }
+    .footer-brand-logo { display: block; margin-bottom: 0.75rem; }
     .footer-brand p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.5rem; }
     .footer-social { display: flex; gap: 0.75rem; }
     .footer-social a {
@@ -554,7 +555,34 @@
 
   <!-- ── Navigation ── -->
   <header class="site-nav" id="site-nav">
-    <a href="#" class="nav-logo">Dash</a>
+    <a href="#" class="nav-logo" aria-label="Dash — Medical Device Management">
+      <svg viewBox="0 0 240 80" width="152" height="51" role="img" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="nav-ecg-glow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <linearGradient id="nav-ecg-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.55"/>
+            <stop offset="50%" stop-color="#00d4ff"/>
+            <stop offset="100%" stop-color="#00a896" stop-opacity="0.55"/>
+          </linearGradient>
+        </defs>
+        <!-- Icon: circle border -->
+        <circle cx="40" cy="40" r="37" fill="none" stroke="#00d4ff" stroke-width="1.5" stroke-opacity="0.4"/>
+        <!-- ECG waveform -->
+        <polyline points="4,40 16,40 22,38 27,11 32,68 36,40 47,40 51,37 55,44 59,40 76,40"
+          fill="none" stroke="url(#nav-ecg-grad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+          filter="url(#nav-ecg-glow)"/>
+        <!-- Peak dot -->
+        <circle cx="27" cy="11" r="2.5" fill="#00ff88" filter="url(#nav-ecg-glow)"/>
+        <!-- Divider -->
+        <line x1="91" y1="22" x2="91" y2="58" stroke="#00d4ff" stroke-width="0.8" stroke-opacity="0.28"/>
+        <!-- Wordmark -->
+        <text x="100" y="48" font-family="Outfit, sans-serif" font-weight="800" font-size="32"
+          fill="#e8f4fc" letter-spacing="5">DASH</text>
+      </svg>
+    </a>
     <nav class="nav-links">
       <a href="#product">Platform</a>
       <a href="#features">Features</a>
@@ -819,7 +847,36 @@
   <footer class="site-footer">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="footer-brand-logo">DASH</div>
+        <svg class="footer-brand-logo" viewBox="0 0 300 80" width="190" height="51"
+          role="img" aria-label="Dash — Medical Device Management" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="ftr-ecg-glow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="2.5" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <linearGradient id="ftr-ecg-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.55"/>
+              <stop offset="50%" stop-color="#00d4ff"/>
+              <stop offset="100%" stop-color="#00a896" stop-opacity="0.55"/>
+            </linearGradient>
+          </defs>
+          <!-- Icon: circle border -->
+          <circle cx="40" cy="40" r="37" fill="none" stroke="#00d4ff" stroke-width="1.5" stroke-opacity="0.4"/>
+          <!-- ECG waveform -->
+          <polyline points="4,40 16,40 22,38 27,11 32,68 36,40 47,40 51,37 55,44 59,40 76,40"
+            fill="none" stroke="url(#ftr-ecg-grad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+            filter="url(#ftr-ecg-glow)"/>
+          <!-- Peak dot -->
+          <circle cx="27" cy="11" r="2.8" fill="#00ff88" filter="url(#ftr-ecg-glow)"/>
+          <!-- Divider -->
+          <line x1="91" y1="20" x2="91" y2="60" stroke="#00d4ff" stroke-width="0.8" stroke-opacity="0.28"/>
+          <!-- Wordmark -->
+          <text x="99" y="46" font-family="Outfit, sans-serif" font-weight="800" font-size="34"
+            fill="#e8f4fc" letter-spacing="5">DASH</text>
+          <!-- Tagline -->
+          <text x="100" y="62" font-family="'JetBrains Mono', monospace" font-weight="300" font-size="8"
+            fill="#3a6b8a" letter-spacing="2.8">MEDICAL DEVICE MANAGEMENT</text>
+        </svg>
         <p>Medical device management, reimagined for the teams who keep hospitals running.</p>
         <div class="footer-social">
           <a href="#" title="Twitter/X">𝕏</a>
