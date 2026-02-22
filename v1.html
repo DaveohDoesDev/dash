@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dash — Medical Device Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;700&family=Outfit:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ── Design tokens ── */
+    :root {
+      --bg-base:        #040d1a;
+      --bg-mid:         #071428;
+      --bg-panel:       #0a1f3a;
+      --cyan:           #00d4ff;
+      --teal:           #00a896;
+      --green:          #00ff88;
+      --purple:         #7b2fff;
+      --text-primary:   #e8f4fc;
+      --text-secondary: #8eb8d4;
+      --text-muted:     #3a6b8a;
+      --border:         rgba(0, 212, 255, 0.15);
+      --glow-cyan:      rgba(0, 212, 255, 0.25);
+    }
+
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--bg-base);
+      background-image: radial-gradient(ellipse 80% 50% at 50% -5%, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Nav ── */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 3rem;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .nav-logo {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: 0.12em;
+      color: var(--cyan);
+      text-transform: uppercase;
+    }
+    nav {
+      display: flex;
+      gap: 2.5rem;
+    }
+    nav a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--text-secondary); }
+    .version-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── Hero ── */
+    main { flex: 1; }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 7rem 2rem 6rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      background: rgba(0, 212, 255, 0.07);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 2.5rem;
+    }
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #e8f4fc 0%, #00d4ff 55%, #00a896 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.75rem;
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin-bottom: 3rem;
+    }
+
+    /* ── CTA Form ── */
+    .cta-group { width: 100%; max-width: 500px; }
+    .waitlist-form {
+      display: flex;
+      gap: 0.625rem;
+      margin-bottom: 1rem;
+    }
+    .waitlist-form input[type="email"] {
+      flex: 1;
+      background: rgba(10, 31, 58, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.875rem 1.25rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9375rem;
+      color: var(--text-primary);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .waitlist-form input[type="email"]::placeholder { color: var(--text-muted); }
+    .waitlist-form input[type="email"]:focus {
+      border-color: rgba(0, 212, 255, 0.5);
+      box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.08);
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--cyan), var(--teal));
+      color: #040d1a;
+      border: none;
+      border-radius: 10px;
+      padding: 0.875rem 1.625rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: box-shadow 0.25s, transform 0.2s;
+    }
+    .btn-primary:hover {
+      box-shadow: 0 0 24px rgba(0, 212, 255, 0.45);
+      transform: translateY(-2px);
+    }
+    .btn-primary:active { transform: translateY(0); }
+
+    .social-proof {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+    .social-proof strong { color: var(--text-secondary); }
+
+    /* ── Confirmation state ── */
+    .confirm-msg {
+      text-align: center;
+      padding: 1.5rem 2rem;
+      background: rgba(0, 255, 136, 0.05);
+      border: 1px solid rgba(0, 255, 136, 0.2);
+      border-radius: 12px;
+      color: var(--green);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.875rem;
+      letter-spacing: 0.04em;
+    }
+    .confirm-msg strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-copy {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+    .footer-tagline {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 640px) {
+      header { padding: 1.25rem 1.5rem; }
+      nav { display: none; }
+      .hero { padding: 5rem 1.5rem 4rem; }
+      .waitlist-form { flex-direction: column; }
+      footer { flex-direction: column; gap: 0.75rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-logo">Dash</div>
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Platform</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="version-badge">v1 · Foundation</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-eyebrow">Medical Device Management Platform</div>
+      <h1>Your devices.<br>One dashboard.</h1>
+      <p class="hero-subtitle">
+        Dash gives medical device managers complete visibility over their entire fleet —
+        tracking, maintenance, compliance, and analytics in one place.
+      </p>
+      <div class="cta-group">
+        <form class="waitlist-form" id="waitlist-form">
+          <input type="email" id="email-input" placeholder="Enter your work email" required>
+          <button type="submit" class="btn-primary">Join the Waitlist</button>
+        </form>
+        <p class="social-proof">Join <strong>340+</strong> medical teams already waiting</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-copy">&copy; 2026 Dash Technologies, Inc.</p>
+    <p class="footer-tagline">Building the future of medical device management</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('waitlist-form');
+    const ctaGroup = document.querySelector('.cta-group');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email-input').value;
+      ctaGroup.innerHTML = `
+        <div class="confirm-msg">
+          <strong>You're on the list.</strong>
+          We'll be in touch at ${email} when early access opens.
+        </div>
+      `;
+    });
+  </script>
+
+</body>
+</html>
