@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <title>Dash — Geometric D-Mark Icon (Dark)</title>
+  <desc>Dash medical device management platform — geometric D-shaped ring mark, dark variant</desc>
+  <defs>
+    <linearGradient id="d-grad-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#00a896"/>
+    </linearGradient>
+    <filter id="d-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <mask id="d-mask">
+      <!-- Outer D shape (white = visible) -->
+      <path d="M 18,10 L 18,70 C 72,70 72,10 18,10 Z" fill="white"/>
+      <!-- Inner cutout (black = hidden) -->
+      <path d="M 28,21 L 28,59 C 60,59 60,21 28,21 Z" fill="black"/>
+    </mask>
+  </defs>
+  <!-- Background -->
+  <circle cx="40" cy="40" r="38" fill="#040d1a"/>
+  <circle cx="40" cy="40" r="38" fill="none" stroke="#00d4ff" stroke-width="1" stroke-opacity="0.2"/>
+  <!-- D-ring shape via mask -->
+  <rect x="0" y="0" width="80" height="80" fill="url(#d-grad-dark)" mask="url(#d-mask)" filter="url(#d-glow)"/>
+  <!-- Corner accent dots -->
+  <circle cx="18" cy="10" r="2.5" fill="#00ff88"/>
+  <circle cx="18" cy="70" r="2.5" fill="#00ff88"/>
+</svg>

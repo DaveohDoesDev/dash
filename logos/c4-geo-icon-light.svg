@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <title>Dash — Geometric D-Mark Icon (Light)</title>
+  <desc>Dash medical device management platform — geometric D-shaped ring mark, light variant</desc>
+  <defs>
+    <linearGradient id="d-grad-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#005f8a"/>
+      <stop offset="100%" stop-color="#007a6a"/>
+    </linearGradient>
+    <mask id="d-mask-l">
+      <path d="M 18,10 L 18,70 C 72,70 72,10 18,10 Z" fill="white"/>
+      <path d="M 28,21 L 28,59 C 60,59 60,21 28,21 Z" fill="black"/>
+    </mask>
+  </defs>
+  <!-- Background -->
+  <circle cx="40" cy="40" r="38" fill="#ffffff"/>
+  <circle cx="40" cy="40" r="38" fill="none" stroke="#005f8a" stroke-width="1" stroke-opacity="0.2"/>
+  <!-- D-ring shape -->
+  <rect x="0" y="0" width="80" height="80" fill="url(#d-grad-light)" mask="url(#d-mask-l)"/>
+  <!-- Corner accent dots -->
+  <circle cx="18" cy="10" r="2.5" fill="#00875a"/>
+  <circle cx="18" cy="70" r="2.5" fill="#00875a"/>
+</svg>

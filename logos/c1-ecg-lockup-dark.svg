@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80">
+  <title>Dash — ECG Lockup (Dark)</title>
+  <desc>Dash medical device management platform — ECG concept full lockup, dark variant</desc>
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800&amp;family=JetBrains+Mono:wght@300&amp;display=swap');</style>
+    <filter id="lk1-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="lk1-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#00a896" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon group -->
+  <g transform="translate(0,0)">
+    <circle cx="40" cy="40" r="38" fill="#040d1a"/>
+    <circle cx="40" cy="40" r="38" fill="none" stroke="#00d4ff" stroke-width="1.5" stroke-opacity="0.35"/>
+    <polyline points="4,40 16,40 22,38 27,11 32,68 36,40 47,40 51,37 55,44 59,40 76,40"
+      fill="none" stroke="url(#lk1-grad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+      filter="url(#lk1-glow)"/>
+    <line x1="4" y1="40" x2="76" y2="40" stroke="#00d4ff" stroke-width="0.5" stroke-opacity="0.12"/>
+    <circle cx="27" cy="11" r="2.8" fill="#00ff88" filter="url(#lk1-glow)"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="96" y="46"
+    font-family="Outfit, sans-serif" font-weight="800" font-size="34"
+    fill="#e8f4fc" letter-spacing="5">DASH</text>
+  <!-- Tagline -->
+  <text x="97" y="62"
+    font-family="'JetBrains Mono', monospace" font-weight="300" font-size="8"
+    fill="#3a6b8a" letter-spacing="2.8">MEDICAL DEVICE MANAGEMENT</text>
+  <!-- Separator line -->
+  <line x1="91" y1="20" x2="91" y2="60" stroke="#00d4ff" stroke-width="0.8" stroke-opacity="0.25"/>
+</svg>

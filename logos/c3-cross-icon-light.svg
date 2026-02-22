@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <title>Dash — Medical Cross Icon (Light)</title>
+  <desc>Dash medical device management platform — medical cross with tech accents, light variant</desc>
+  <defs>
+    <linearGradient id="cross-grad-l" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#005f8a"/>
+      <stop offset="100%" stop-color="#007a6a"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="38" fill="#ffffff"/>
+  <circle cx="40" cy="40" r="38" fill="none" stroke="#005f8a" stroke-width="1" stroke-opacity="0.2"/>
+  <!-- Cross — horizontal bar -->
+  <rect x="11" y="29" width="58" height="22" rx="5" fill="url(#cross-grad-l)"/>
+  <!-- Cross — vertical bar -->
+  <rect x="29" y="11" width="22" height="58" rx="5" fill="url(#cross-grad-l)"/>
+  <!-- Circuit dots at arm ends -->
+  <circle cx="40" cy="12" r="3" fill="#ffffff"/>
+  <circle cx="40" cy="12" r="3" fill="none" stroke="#00875a" stroke-width="1.5"/>
+  <circle cx="40" cy="68" r="3" fill="#ffffff"/>
+  <circle cx="40" cy="68" r="3" fill="none" stroke="#00875a" stroke-width="1.5"/>
+  <circle cx="12" cy="40" r="3" fill="#ffffff"/>
+  <circle cx="12" cy="40" r="3" fill="none" stroke="#00875a" stroke-width="1.5"/>
+  <circle cx="68" cy="40" r="3" fill="#ffffff"/>
+  <circle cx="68" cy="40" r="3" fill="none" stroke="#00875a" stroke-width="1.5"/>
+  <!-- Center highlight -->
+  <circle cx="40" cy="40" r="4" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.5"/>
+</svg>

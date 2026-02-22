@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80">
+  <title>Dash — Medical Cross Lockup (Light)</title>
+  <desc>Dash medical device management platform — medical cross concept full lockup, light variant</desc>
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800&amp;family=JetBrains+Mono:wght@300&amp;display=swap');</style>
+    <linearGradient id="lk3l-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#005f8a"/>
+      <stop offset="100%" stop-color="#007a6a"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="300" height="80" fill="#ffffff"/>
+  <!-- Icon group -->
+  <g transform="translate(0,0)">
+    <circle cx="40" cy="40" r="38" fill="#ffffff"/>
+    <circle cx="40" cy="40" r="38" fill="none" stroke="#005f8a" stroke-width="1" stroke-opacity="0.2"/>
+    <rect x="11" y="29" width="58" height="22" rx="5" fill="url(#lk3l-grad)"/>
+    <rect x="29" y="11" width="22" height="58" rx="5" fill="url(#lk3l-grad)"/>
+    <circle cx="40" cy="12" r="3" fill="#ffffff"/>
+    <circle cx="40" cy="12" r="3" fill="none" stroke="#00875a" stroke-width="1.5"/>
+    <circle cx="40" cy="68" r="3" fill="#ffffff"/>
+    <circle cx="40" cy="68" r="3" fill="none" stroke="#00875a" stroke-width="1.5"/>
+    <circle cx="12" cy="40" r="3" fill="#ffffff"/>
+    <circle cx="12" cy="40" r="3" fill="none" stroke="#00875a" stroke-width="1.5"/>
+    <circle cx="68" cy="40" r="3" fill="#ffffff"/>
+    <circle cx="68" cy="40" r="3" fill="none" stroke="#00875a" stroke-width="1.5"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="96" y="46"
+    font-family="Outfit, sans-serif" font-weight="800" font-size="34"
+    fill="#040d1a" letter-spacing="5">DASH</text>
+  <!-- Tagline -->
+  <text x="97" y="62"
+    font-family="'JetBrains Mono', monospace" font-weight="300" font-size="8"
+    fill="#7a9ab5" letter-spacing="2.8">MEDICAL DEVICE MANAGEMENT</text>
+  <line x1="91" y1="20" x2="91" y2="60" stroke="#005f8a" stroke-width="0.8" stroke-opacity="0.2"/>
+</svg>

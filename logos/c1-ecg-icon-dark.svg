@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <title>Dash — ECG Icon (Dark)</title>
+  <desc>Dash medical device management platform — heartbeat ECG icon, dark variant</desc>
+  <defs>
+    <filter id="glow-d" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="ecg-grad-d" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#00a896" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="38" fill="#040d1a"/>
+  <circle cx="40" cy="40" r="38" fill="none" stroke="#00d4ff" stroke-width="1.5" stroke-opacity="0.35"/>
+  <!-- ECG waveform -->
+  <polyline
+    points="4,40 16,40 22,38 27,11 32,68 36,40 47,40 51,37 55,44 59,40 76,40"
+    fill="none" stroke="url(#ecg-grad-d)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+    filter="url(#glow-d)"
+  />
+  <!-- Baseline glow -->
+  <line x1="4" y1="40" x2="76" y2="40" stroke="#00d4ff" stroke-width="0.5" stroke-opacity="0.12"/>
+  <!-- Peak accent -->
+  <circle cx="27" cy="11" r="2.8" fill="#00ff88" filter="url(#glow-d)"/>
+</svg>

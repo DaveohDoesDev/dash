@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80">
+  <title>Dash — Geometric D-Mark Lockup (Light)</title>
+  <desc>Dash medical device management platform — geometric D-mark concept full lockup, light variant</desc>
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800&amp;family=JetBrains+Mono:wght@300&amp;display=swap');</style>
+    <linearGradient id="lk4l-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#005f8a"/>
+      <stop offset="100%" stop-color="#007a6a"/>
+    </linearGradient>
+    <mask id="lk4l-mask">
+      <path d="M 18,10 L 18,70 C 72,70 72,10 18,10 Z" fill="white"/>
+      <path d="M 28,21 L 28,59 C 60,59 60,21 28,21 Z" fill="black"/>
+    </mask>
+  </defs>
+  <rect x="0" y="0" width="300" height="80" fill="#ffffff"/>
+  <!-- Icon group -->
+  <g transform="translate(0,0)">
+    <circle cx="40" cy="40" r="38" fill="#ffffff"/>
+    <circle cx="40" cy="40" r="38" fill="none" stroke="#005f8a" stroke-width="1" stroke-opacity="0.2"/>
+    <rect x="0" y="0" width="80" height="80" fill="url(#lk4l-grad)" mask="url(#lk4l-mask)"/>
+    <circle cx="18" cy="10" r="2.5" fill="#00875a"/>
+    <circle cx="18" cy="70" r="2.5" fill="#00875a"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="96" y="46"
+    font-family="Outfit, sans-serif" font-weight="800" font-size="34"
+    fill="#040d1a" letter-spacing="5">DASH</text>
+  <!-- Tagline -->
+  <text x="97" y="62"
+    font-family="'JetBrains Mono', monospace" font-weight="300" font-size="8"
+    fill="#7a9ab5" letter-spacing="2.8">MEDICAL DEVICE MANAGEMENT</text>
+  <line x1="91" y1="20" x2="91" y2="60" stroke="#005f8a" stroke-width="0.8" stroke-opacity="0.2"/>
+</svg>
