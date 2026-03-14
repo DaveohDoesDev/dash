@@ -1,0 +1,17 @@
+# Credentials and secrets
+.env
+.env.*
+*.pem
+client_secret*.json
+token.json
+
+# Claude Code settings
+.claude/
+
+# macOS / Windows / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+*.swp
+*.swo
